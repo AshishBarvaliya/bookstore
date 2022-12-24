@@ -1,0 +1,50 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "react-app",
+        "plugin:react/recommended",
+        "standard-with-typescript",
+        "plugin:import/typescript",
+        "plugin:prettier/recommended"
+    ],
+    "overrides": [],
+    "ignorePatterns": [
+        "node_modules/*",
+        ".vscode",
+        ".gitignore"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": "tsconfig.json",
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "prettier"
+    ],
+    "rules": {
+        "jsx-quotes": [
+            "warn",
+            "prefer-double"
+        ],
+        "react/react-in-jsx-scope": "off",
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            {
+                "argsIgnorePattern": "^_",
+                "ignoreRestSiblings": true
+            }
+        ],
+        "@typescript-eslint/no-var-requires": 2,
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/no-use-before-define": "off"
+    }
+}
