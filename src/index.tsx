@@ -6,14 +6,12 @@ import { CssBaseline } from '@mui/material'
 import theme from './theme/Theme'
 import reportWebVitals from './reportWebVitals'
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-)
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <ThemeProvider theme={theme}>
     <CssBaseline />
     <App />
-  </ThemeProvider>
+  </ThemeProvider>,
 )
 
 reportWebVitals()
