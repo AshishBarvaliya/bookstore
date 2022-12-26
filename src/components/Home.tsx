@@ -63,7 +63,7 @@ const Banner = ({ item }: BannerProps): JSX.Element => {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'flex-end',
-            minWidth: ['90%', '45%', '55%'],
+            minWidth: ['90%', '45%', '45%'],
             padding: ['8px', 0],
             paddingBottom: ['30px', '180px'],
             textAlign: ['center', 'start'],
@@ -84,7 +84,7 @@ const Banner = ({ item }: BannerProps): JSX.Element => {
         <Box
           sx={{
             marginX: [0, 0, '30px'],
-            textAlign: 'center',
+            textAlign: ['center', 'start'],
           }}
         >
           <Box
@@ -96,17 +96,15 @@ const Banner = ({ item }: BannerProps): JSX.Element => {
           >
             <img src={item.image} width={400} alt={item.title} />
           </Box>
-          <Box display={['none', 'block']}>
-            <img
-              src="bg-pattern1.png"
-              width={550}
-              alt="bg-pattern"
-              style={{
-                position: 'absolute',
-                marginLeft: '-350px',
-                marginTop: '-50px',
-              }}
-            />
+          <Box
+            sx={{
+              display: ['none', 'block'],
+              position: 'absolute',
+              top: 10,
+              marginLeft: '40px',
+            }}
+          >
+            <img src="bg-pattern1.png" width={550} alt="bg-pattern" />
           </Box>
         </Box>
       </Box>

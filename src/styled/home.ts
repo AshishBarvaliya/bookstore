@@ -1,12 +1,13 @@
 import styled from '@emotion/styled'
+import theme from '../theme/Theme'
 
 export const StyledContainer = styled.div`
-  background-color: #f3f2ed;
+  background-color: ${theme.palette.background.default};
 
   .Banner {
     position: relative;
     box-shadow: none;
-    background-color: #f3f2ed;
+    background-color: ${theme.palette.background.default};
 
     .BannerFlex {
       display: flex;
