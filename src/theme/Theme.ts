@@ -13,13 +13,16 @@ const theme = createTheme({
       main: red.A400,
     },
     text: {
-      primary: '#343434',
-      secondary: '#A1A19F',
+      primary: '#222222',
+      secondary: '#7A7A7A',
     },
     background: {
       default: '#F3F2ED',
       paper: '#EEEBE4',
     },
+  },
+  typography: {
+    fontFamily: 'Prata',
   },
 })
 
