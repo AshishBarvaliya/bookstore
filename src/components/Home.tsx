@@ -6,7 +6,7 @@ import { Container } from './Container'
 export const Home: React.FC = () => {
   return (
     <StyledContainer>
-      <Container sx={{ paddingX: '0 !important' }}>
+      <Container sx={{ paddingX: '0 !important', height: ['1000px', '800px'] }}>
         <Carousel
           className="home"
           autoPlay
@@ -52,7 +52,7 @@ const Banner = ({ item }: BannerProps): JSX.Element => {
   return (
     <Card
       className="Banner"
-      sx={{ height: ['100%', '700px', '700px'], pl: ['0px', '70px', '80px'] }}
+      sx={{ height: ['900px', '600px', '640px'], pl: ['0px', '70px', '80px'] }}
     >
       <Box
         className="BannerFlex"
@@ -65,7 +65,7 @@ const Banner = ({ item }: BannerProps): JSX.Element => {
             justifyContent: 'flex-end',
             minWidth: ['90%', '45%', '45%'],
             padding: ['8px', 0],
-            paddingBottom: ['30px', '180px'],
+            paddingBottom: ['30px', '80px', '130px'],
             textAlign: ['center', 'start'],
           }}
         >
