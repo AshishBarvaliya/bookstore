@@ -25,7 +25,7 @@ export const Home: React.FC = () => {
             },
           }}
           indicatorContainerProps={{
-            style: { margin: '0', textAlign: 'start', paddingLeft: '100px' },
+            style: { margin: '0', textAlign: 'start', paddingLeft: '160px' },
           }}
         >
           {items.map((item, index) => (
