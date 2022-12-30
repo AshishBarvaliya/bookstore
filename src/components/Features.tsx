@@ -1,5 +1,6 @@
 import { Box, Card, Typography } from '@mui/material'
 import Carousel from 'react-material-ui-carousel'
+import { StyledImgContainer } from '../styled/features'
 import theme from '../theme/Theme'
 import { Container } from './Container'
 
@@ -209,9 +210,24 @@ export const Features: React.FC = () => {
                     justifyContent: 'center',
                   }}
                 >
-                  <Box mb={3} bgcolor="#EFEEE8" border="1px solid #EAE8DF">
+                  <StyledImgContainer>
                     <img src={e.image} alt={e.title} width={265} />
-                  </Box>
+                    <Box
+                      className="add-to-cart"
+                      sx={{
+                        display: 'none',
+                        position: 'absolute',
+                        backgroundColor: 'black',
+                        color: 'white',
+                        width: '100%',
+                        fontFamily: 'Plus Jakarta Sans',
+                        py: '13px',
+                        mt: '-120px',
+                      }}
+                    >
+                      ADD TO CART
+                    </Box>
+                  </StyledImgContainer>
                   <Typography fontSize="22px">{e.title}</Typography>
                   <Typography
                     fontSize="14px"
