@@ -1,11 +1,11 @@
 import Carousel from 'react-material-ui-carousel'
 import { Card, Typography, Box } from '@mui/material'
-import { StyledContainer } from '../styled/home'
 import { Container } from './Container'
+import theme from '../theme/Theme'
 
 export const Home: React.FC = () => {
   return (
-    <StyledContainer>
+    <Box bgcolor={theme.palette.background.default}>
       <Container sx={{ paddingX: '0 !important', height: ['1000px', '800px'] }}>
         <Carousel
           className="home"
@@ -33,7 +33,7 @@ export const Home: React.FC = () => {
           ))}
         </Carousel>
       </Container>
-    </StyledContainer>
+    </Box>
   )
 }
 
@@ -51,12 +51,21 @@ interface BannerProps {
 const Banner = ({ item }: BannerProps): JSX.Element => {
   return (
     <Card
-      className="Banner"
-      sx={{ height: ['900px', '600px', '640px'], pl: ['0px', '70px', '80px'] }}
+      sx={{
+        position: 'relative',
+        boxShadow: 'none',
+        backgroundColor: 'background.default',
+        height: ['900px', '600px', '640px'],
+        pl: ['0px', '70px', '80px'],
+      }}
     >
       <Box
-        className="BannerFlex"
-        flexDirection={['column-reverse', 'row', 'row']}
+        sx={{
+          display: 'flex',
+          position: 'relative',
+          height: '100%',
+          flexDirection: ['column-reverse', 'row', 'row'],
+        }}
       >
         <Box
           sx={{
@@ -69,7 +78,11 @@ const Banner = ({ item }: BannerProps): JSX.Element => {
             textAlign: ['center', 'start'],
           }}
         >
-          <Typography variant="h1" fontSize={['45px', '55px', '74px']}>
+          <Typography
+            variant="h1"
+            color="text.primary"
+            fontSize={['45px', '55px', '74px']}
+          >
             {item.title}
           </Typography>
           <Typography
