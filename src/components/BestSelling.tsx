@@ -88,6 +88,7 @@ export const BestSelling: React.FC = () => {
             <Typography
               fontSize={['16px', '16px', '23px']}
               mt={['24px', '24px', '35px']}
+              color="#74642F"
             >
               {bestBook.price}
             </Typography>

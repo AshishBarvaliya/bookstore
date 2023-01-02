@@ -4,6 +4,7 @@ import { BestSelling } from './components/BestSelling'
 import { Features } from './components/Features'
 import { Header } from './components/Header'
 import { Home } from './components/Home'
+import { PopularBooks } from './components/PopularBooks'
 
 const App: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: React.FC = () => {
       <AssociatedWith />
       <Features />
       <BestSelling />
+      <PopularBooks />
     </Box>
   )
 }

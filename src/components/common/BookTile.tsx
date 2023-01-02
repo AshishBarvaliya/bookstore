@@ -48,7 +48,7 @@ export const BookTile: React.FC<IBookTile> = ({
     >
       {author}
     </Typography>
-    <Typography fontSize="18px" pt="20px">
+    <Typography fontSize="18px" pt="20px" color="#74642F">
       {price}
     </Typography>
   </Box>
