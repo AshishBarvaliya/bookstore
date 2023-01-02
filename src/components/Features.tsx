@@ -1,7 +1,8 @@
-import { Box, Card, Typography } from '@mui/material'
+import { Box, Card } from '@mui/material'
 import Carousel from 'react-material-ui-carousel'
-import { StyledImgContainer } from '../styled/features'
 import theme from '../theme/Theme'
+import { BookTile } from './common/BookTile'
+import { TitleHeader } from './common/TitleHeader'
 import { Container } from './Container'
 
 export const Features: React.FC = () => {
@@ -120,45 +121,7 @@ export const Features: React.FC = () => {
           textAlign: 'center',
         }}
       >
-        <Typography
-          color="text.secondary"
-          fontFamily="Plus Jakarta Sans"
-          fontSize="13px"
-          fontWeight={500}
-        >
-          Some quality items
-        </Typography>
-        <Box
-          display="flex"
-          mb={['30px', '35px', '50px']}
-          mt={['10px', '15px', '20px']}
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Box
-            sx={{
-              height: '1px',
-              backgroundColor: theme.palette.background.paper,
-              flex: '1',
-              mr: '80px',
-            }}
-          />
-          <Typography
-            variant="h1"
-            fontSize={['30px', '35px', '48px']}
-            color="text.primary"
-          >
-            Featured Books
-          </Typography>
-          <Box
-            sx={{
-              height: '1px',
-              backgroundColor: theme.palette.background.paper,
-              flex: '1',
-              ml: '80px',
-            }}
-          />
-        </Box>
+        <TitleHeader title={'Featured Books'} subTitle={'Some quality items'} />
         <Carousel
           className="features"
           autoPlay={false}
@@ -194,52 +157,19 @@ export const Features: React.FC = () => {
                 borderBottom: '1px solid #EDEBE4',
                 pb: '50px',
                 px: ['30px', '30px', '0px'],
+                justifyContent: 'center',
               }}
             >
-              {item.books.map((e, i) => (
+              {item.books.map((book, i) => (
                 <Box
-                  key={e.id}
+                  key={book.id}
                   display={[
-                    i > 0 ? 'none' : 'flex',
-                    i > 1 ? 'none' : 'flex',
-                    'flex',
+                    i > 0 ? 'none' : 'block',
+                    i > 1 ? 'none' : 'block',
+                    'block',
                   ]}
-                  sx={{
-                    flexDirection: 'column',
-                    flex: 1,
-                    justifyContent: 'center',
-                  }}
                 >
-                  <StyledImgContainer>
-                    <img src={e.image} alt={e.title} width={265} />
-                    <Box
-                      className="add-to-cart"
-                      sx={{
-                        display: 'none',
-                        position: 'absolute',
-                        backgroundColor: 'black',
-                        color: 'white',
-                        width: '100%',
-                        fontFamily: 'Plus Jakarta Sans',
-                        py: '13px',
-                        mt: '-120px',
-                      }}
-                    >
-                      ADD TO CART
-                    </Box>
-                  </StyledImgContainer>
-                  <Typography fontSize="22px">{e.title}</Typography>
-                  <Typography
-                    fontSize="14px"
-                    fontFamily="Plus Jakarta Sans"
-                    pt={1}
-                    color="text.secondary"
-                  >
-                    {e.author}
-                  </Typography>
-                  <Typography fontSize="18px" pt="20px">
-                    {e.price}
-                  </Typography>
+                  <BookTile {...book} />
                 </Box>
               ))}
             </Card>
