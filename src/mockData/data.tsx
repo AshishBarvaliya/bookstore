@@ -185,3 +185,9 @@ export const books = [
     image: 'book5.png',
   },
 ]
+
+export const quote = {
+  comment: `“The more that you read, the more things you will know. The more that
+  you learn, the more places you’ll go.”`,
+  author: 'Dr. Seuss',
+}

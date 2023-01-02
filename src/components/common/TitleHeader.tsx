@@ -25,7 +25,7 @@ export const TitleHeader: React.FC<ITitleHeader> = ({ title, subTitle }) => (
     >
       <Box
         sx={{
-          height: '1px',
+          height: '2px',
           backgroundColor: theme.palette.background.paper,
           flex: '1',
           mr: '80px',
@@ -40,7 +40,7 @@ export const TitleHeader: React.FC<ITitleHeader> = ({ title, subTitle }) => (
       </Typography>
       <Box
         sx={{
-          height: '1px',
+          height: '2px',
           backgroundColor: theme.palette.background.paper,
           flex: '1',
           ml: '80px',

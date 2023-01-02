@@ -53,7 +53,7 @@ export const Features: React.FC = () => {
                 boxShadow: 'none',
                 backgroundColor: 'background.default',
                 gap: '40px',
-                borderBottom: '1px solid #EDEBE4',
+                borderBottom: '2px solid #EDEBE4',
                 pb: '50px',
                 px: ['30px', '30px', '0px'],
                 justifyContent: 'center',
