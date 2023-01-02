@@ -1,11 +1,11 @@
 import { features } from '../mockData/data'
 import { BooksSlider } from './common/BooksSlider'
 
-export const Features: React.FC = () => {
+export const BookWithOffer: React.FC = () => {
   return (
     <BooksSlider
-      title={'Featured Books'}
-      subTitle={'Some quality items'}
+      title={'Books with offer'}
+      subTitle={'Grab your opportunity'}
       bookSliderData={features}
     />
   )

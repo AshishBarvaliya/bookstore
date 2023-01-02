@@ -1,4 +1,19 @@
-export const features = [
+export interface Book {
+  id: string
+  title: string
+  author: string
+  price: string
+  image: string
+  discout?: string
+  newPrice?: string
+}
+
+export interface BookSliderData {
+  id: string
+  books: Book[]
+}
+
+export const features: BookSliderData[] = [
   {
     id: '1',
     books: [
@@ -127,7 +142,7 @@ export const popularBooks = [
   },
 ]
 
-export const books = [
+export const books: Book[] = [
   {
     id: '1',
     title: 'Simple way of piece life',

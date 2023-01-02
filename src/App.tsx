@@ -1,6 +1,7 @@
 import { Box } from '@mui/material'
 import { AssociatedWith } from './components/AssociatedWith'
 import { BestSelling } from './components/BestSelling'
+import { BookWithOffer } from './components/BookWithOffer'
 import { Features } from './components/Features'
 import { Header } from './components/Header'
 import { Home } from './components/Home'
@@ -17,6 +18,7 @@ const App: React.FC = () => {
       <BestSelling />
       <PopularBooks />
       <Quote />
+      <BookWithOffer />
     </Box>
   )
 }
