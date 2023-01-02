@@ -1,4 +1,5 @@
-import { features } from '../mockData/data'
+import { booksWithOffer } from '../mockData/data'
+import theme from '../theme/Theme'
 import { BooksSlider } from './common/BooksSlider'
 
 export const BookWithOffer: React.FC = () => {
@@ -6,7 +7,9 @@ export const BookWithOffer: React.FC = () => {
     <BooksSlider
       title={'Books with offer'}
       subTitle={'Grab your opportunity'}
-      bookSliderData={features}
+      bookSliderData={booksWithOffer}
+      bookTileBG={theme.palette.background.default}
+      splitBG
     />
   )
 }

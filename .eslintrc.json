@@ -46,6 +46,7 @@
         "@typescript-eslint/no-var-requires": 2,
         "@typescript-eslint/explicit-module-boundary-types": "off",
         "@typescript-eslint/no-use-before-define": "off",
-        "react/prop-types": "off"
+        "react/prop-types": "off",
+        "@typescript-eslint/strict-boolean-expressions": 0
     }
 }

@@ -1,6 +1,6 @@
 import { Box, Card } from '@mui/material'
 import Carousel from 'react-material-ui-carousel'
-import { BookSliderData } from '../../mockData/data'
+import { IBookSliderData } from '../../mockData/data'
 import theme from '../../theme/Theme'
 import { Container } from '../Container'
 import { BookTile } from './BookTile'
@@ -9,19 +9,25 @@ import { TitleHeader } from './TitleHeader'
 interface IBooksSlider {
   title: string
   subTitle: string
-  bookSliderData: BookSliderData[]
+  bookSliderData: IBookSliderData[]
+  bookTileBG?: string
+  splitBG?: boolean
 }
 
 export const BooksSlider: React.FC<IBooksSlider> = ({
   title,
   subTitle,
   bookSliderData,
+  bookTileBG,
+  splitBG = false,
 }) => {
   return (
     <Box
       sx={{
         pt: ['80px', '120px', '180px'],
-        backgroundColor: theme.palette.background.default,
+        background: splitBG
+          ? 'linear-gradient(to bottom, #EDEBE4 45%, #F3F2EC 0%)'
+          : theme.palette.background.default,
       }}
     >
       <Container
@@ -61,7 +67,7 @@ export const BooksSlider: React.FC<IBooksSlider> = ({
                 display: 'flex',
                 position: 'relative',
                 boxShadow: 'none',
-                backgroundColor: 'background.default',
+                backgroundColor: 'transparent',
                 gap: '40px',
                 borderBottom: '2px solid #EDEBE4',
                 pb: '50px',
@@ -78,7 +84,7 @@ export const BooksSlider: React.FC<IBooksSlider> = ({
                     'block',
                   ]}
                 >
-                  <BookTile {...book} />
+                  <BookTile {...book} bgcolor={bookTileBG} />
                 </Box>
               ))}
             </Card>

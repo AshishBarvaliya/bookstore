@@ -1,5 +1,4 @@
 import { Box, Typography } from '@mui/material'
-import theme from '../../theme/Theme'
 
 interface ITitleHeader {
   title: string
@@ -25,8 +24,9 @@ export const TitleHeader: React.FC<ITitleHeader> = ({ title, subTitle }) => (
     >
       <Box
         sx={{
+          display: ['none', 'block'],
           height: '2px',
-          backgroundColor: theme.palette.background.paper,
+          backgroundColor: '#E0E0E0',
           flex: '1',
           mr: '80px',
         }}
@@ -40,8 +40,9 @@ export const TitleHeader: React.FC<ITitleHeader> = ({ title, subTitle }) => (
       </Typography>
       <Box
         sx={{
+          display: ['none', 'block'],
           height: '2px',
-          backgroundColor: theme.palette.background.paper,
+          backgroundColor: '#E0E0E0',
           flex: '1',
           ml: '80px',
         }}
