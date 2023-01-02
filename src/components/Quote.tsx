@@ -21,7 +21,7 @@ export const Quote: React.FC = () => (
         color="text.primary"
         fontWeight={400}
       >
-        Quote of the day
+        Quote Of The Day
       </Typography>
       <TildeIcon />
       <Typography

@@ -7,6 +7,7 @@ import { Header } from './components/Header'
 import { Home } from './components/Home'
 import { PopularBooks } from './components/PopularBooks'
 import { Quote } from './components/Quote'
+import { Subscribe } from './components/Subscribe'
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
       <PopularBooks />
       <Quote />
       <BookWithOffer />
+      <Subscribe />
     </Box>
   )
 }
