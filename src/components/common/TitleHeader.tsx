@@ -12,6 +12,7 @@ export const TitleHeader: React.FC<ITitleHeader> = ({ title, subTitle }) => (
       fontFamily="Plus Jakarta Sans"
       fontSize="13px"
       fontWeight={500}
+      textTransform="uppercase"
     >
       {subTitle}
     </Typography>

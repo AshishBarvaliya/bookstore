@@ -332,3 +332,35 @@ export const booksWithOffer: IBookSliderData[] = [
     ],
   },
 ]
+
+export interface IArticle {
+  id: string
+  image: string
+  title: string
+  tag: string
+  date: string
+}
+
+export const articlesData = [
+  {
+    id: '1',
+    image: 'articles3.png',
+    title: 'Reading books always makes the moments happy',
+    tag: 'inspiration',
+    date: '2 Aug, 2021',
+  },
+  {
+    id: '2',
+    image: 'articles2.png',
+    title: 'Reading books always makes the moments happy',
+    tag: 'inspiration',
+    date: '2 Aug, 2021',
+  },
+  {
+    id: '3',
+    image: 'articles1.png',
+    title: 'Reading books always makes the moments happy',
+    tag: 'inspiration',
+    date: '2 Aug, 2021',
+  },
+]

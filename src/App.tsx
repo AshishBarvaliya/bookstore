@@ -1,4 +1,5 @@
 import { Box } from '@mui/material'
+import { Articles } from './components/Articles'
 import { AssociatedWith } from './components/AssociatedWith'
 import { BestSelling } from './components/BestSelling'
 import { BookWithOffer } from './components/BookWithOffer'
@@ -21,6 +22,7 @@ const App: React.FC = () => {
       <Quote />
       <BookWithOffer />
       <Subscribe />
+      <Articles />
     </Box>
   )
 }
