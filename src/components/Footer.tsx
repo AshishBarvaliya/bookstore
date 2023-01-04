@@ -1,8 +1,9 @@
 import { Facebook, Instagram, LinkedIn, Twitter } from '@mui/icons-material'
-import { Box, Link, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import { footerNavLinks } from '../mockData/data'
 import theme from '../theme/Theme'
 import { Container } from './Container'
+import { Credits } from './Credits'
 
 export const Footer: React.FC = () => (
   <Box
@@ -196,70 +197,7 @@ export const Footer: React.FC = () => (
           <LinkedIn fontSize="inherit" color="secondary" />
         </Box>
       </Box>
-      <Box
-        sx={{
-          borderTop: '1px solid #E0E0E0',
-          display: 'flex',
-          justifyContent: 'center',
-          py: ['14px', '20px', '20px'],
-        }}
-      >
-        <Typography
-          fontWeight={400}
-          fontFamily="Plus Jakarta Sans"
-          color="text.primary"
-          fontSize="14px"
-        >
-          Made by
-          <Link
-            href="https://github.com/AshishBarvaliya"
-            color="text.primary"
-            target="_blank"
-            rel="noopener noreferrer"
-            sx={{
-              cursor: 'pointer',
-              px: '3px',
-              ':hover': {
-                color: 'red',
-                fontWeight: 500,
-              },
-            }}
-          >
-            Ashish
-          </Link>
-          with
-          <Link
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://reactjs.org/"
-            color="text.primary"
-            sx={{ cursor: 'pointer', px: '3px' }}
-          >
-            React
-          </Link>
-          &
-          <Link
-            href="https://mui.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            color="text.primary"
-            sx={{ cursor: 'pointer', px: '3px' }}
-          >
-            MUI
-          </Link>
-          . Deployed on
-          <Link
-            href="https://www.netlify.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            color="text.primary"
-            sx={{ cursor: 'pointer', px: '3px' }}
-          >
-            Netlify
-          </Link>
-          .
-        </Typography>
-      </Box>
+      <Credits />
     </Container>
   </Box>
 )
