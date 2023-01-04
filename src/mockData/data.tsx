@@ -364,3 +364,31 @@ export const articlesData = [
     date: '2 Aug, 2021',
   },
 ]
+
+export const footerNavLinks = [
+  {
+    id: '1',
+    title: 'About Us',
+    links: ['vision', 'articles', 'careers', 'service', 'terms', 'donate'],
+  },
+  {
+    id: '2',
+    title: 'Discover',
+    links: ['Home', 'Books', 'Authors', 'Subjects', 'advanced search'],
+  },
+  {
+    id: '3',
+    title: 'My Account',
+    links: ['Sign In', 'View Cart', 'My Wishtlist', 'Track My Order'],
+  },
+  {
+    id: '4',
+    title: 'Help',
+    links: [
+      'Help center',
+      'Report a problem',
+      'Suggesting edits ',
+      'Contact us',
+    ],
+  },
+]

@@ -5,6 +5,7 @@ import { BestSelling } from './components/BestSelling'
 import { BookWithOffer } from './components/BookWithOffer'
 import { DownloadApp } from './components/DownloadApp'
 import { Features } from './components/Features'
+import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { Home } from './components/Home'
 import { PopularBooks } from './components/PopularBooks'
@@ -25,6 +26,7 @@ const App: React.FC = () => {
       <Subscribe />
       <Articles />
       <DownloadApp />
+      <Footer />
     </Box>
   )
 }
