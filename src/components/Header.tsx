@@ -48,10 +48,10 @@ export const Header: React.FC = () => {
           }}
         >
           <Box display="flex" gap="12px">
-            <Facebook fontSize="inherit" color="secondary" />
-            <Instagram fontSize="inherit" color="secondary" />
-            <Twitter fontSize="inherit" color="secondary" />
-            <LinkedIn fontSize="inherit" color="secondary" />
+            <Facebook fontSize="inherit" color="secondary" cursor="pointer" />
+            <Instagram fontSize="inherit" color="secondary" cursor="pointer" />
+            <Twitter fontSize="inherit" color="secondary" cursor="pointer" />
+            <LinkedIn fontSize="inherit" color="secondary" cursor="pointer" />
           </Box>
           <Box display="flex">
             {navLinks.map((e, i) => (

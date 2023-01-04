@@ -87,13 +87,21 @@ export const DownloadApp: React.FC = () => {
                 mt: '40px',
               }}
             >
-              <img src="googleplay.png" width={150} alt="googleplay" />
+              <img
+                src="googleplay.png"
+                width={150}
+                alt="googleplay"
+                style={{
+                  cursor: 'pointer',
+                }}
+              />
               <img
                 src="apple.png"
                 width={150}
                 alt="apple"
                 style={{
                   marginLeft: '12px',
+                  cursor: 'pointer',
                 }}
               />
             </Box>

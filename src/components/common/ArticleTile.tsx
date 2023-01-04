@@ -43,9 +43,9 @@ export const ArticleTile: React.FC<IArticle> = ({
         {tag}
       </Typography>
       <Box display="flex" gap="12px" fontSize="13px">
-        <Facebook fontSize="inherit" color="secondary" />
-        <Instagram fontSize="inherit" color="secondary" />
-        <Twitter fontSize="inherit" color="secondary" />
+        <Facebook fontSize="inherit" color="secondary" cursor="pointer" />
+        <Instagram fontSize="inherit" color="secondary" cursor="pointer" />
+        <Twitter fontSize="inherit" color="secondary" cursor="pointer" />
       </Box>
     </Box>
   </Box>

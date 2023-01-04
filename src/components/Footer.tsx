@@ -191,10 +191,10 @@ export const Footer: React.FC = () => (
           © 2022 Booksaw. All rights reserved.
         </Typography>
         <Box display="flex" gap="20px" justifyContent="center" mt={['10px', 0]}>
-          <Facebook fontSize="inherit" color="secondary" />
-          <Instagram fontSize="inherit" color="secondary" />
-          <Twitter fontSize="inherit" color="secondary" />
-          <LinkedIn fontSize="inherit" color="secondary" />
+          <Facebook fontSize="inherit" color="secondary" cursor="pointer" />
+          <Instagram fontSize="inherit" color="secondary" cursor="pointer" />
+          <Twitter fontSize="inherit" color="secondary" cursor="pointer" />
+          <LinkedIn fontSize="inherit" color="secondary" cursor="pointer" />
         </Box>
       </Box>
       <Credits />
