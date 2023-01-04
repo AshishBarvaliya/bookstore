@@ -39,7 +39,7 @@ export const BooksSlider: React.FC<IBooksSlider> = ({
         <TitleHeader title={title} subTitle={subTitle} />
         <Carousel
           className="features"
-          autoPlay={false}
+          autoPlay
           animation="slide"
           duration={700}
           cycleNavigation
