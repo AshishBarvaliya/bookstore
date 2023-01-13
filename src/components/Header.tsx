@@ -12,9 +12,15 @@ import {
 import { Container } from './Container'
 import { Link } from '@mui/material'
 import theme from '../theme/Theme'
+import { ReactNode } from 'react'
+
+interface INavLinks {
+  link: string
+  icon: ReactNode
+}
 
 export const Header: React.FC = () => {
-  const navLinks = [
+  const navLinks: INavLinks[] = [
     {
       link: 'accont',
       icon: <PersonOutlineOutlined sx={{ fontSize: '13px', mr: '8px' }} />,
@@ -29,7 +35,14 @@ export const Header: React.FC = () => {
     },
   ]
 
-  const mainNavLinks = ['home', 'about', 'pages', 'shop', 'articles', 'contact']
+  const mainNavLinks: string[] = [
+    'home',
+    'about',
+    'pages',
+    'shop',
+    'articles',
+    'contact',
+  ]
 
   return (
     <Box>
@@ -54,9 +67,9 @@ export const Header: React.FC = () => {
             <LinkedIn fontSize="inherit" color="secondary" cursor="pointer" />
           </Box>
           <Box display="flex">
-            {navLinks.map((e, i) => (
+            {navLinks.map((nav: INavLinks, ind: number) => (
               <Link
-                key={e.link}
+                key={nav.link}
                 component="button"
                 fontSize="10px"
                 color="text.secondary"
@@ -67,13 +80,13 @@ export const Header: React.FC = () => {
                   display="flex"
                   alignItems="center"
                   borderRight={
-                    i + 1 === navLinks.length ? 'none' : '1px solid #A1A19F'
+                    ind + 1 === navLinks.length ? 'none' : '1px solid #A1A19F'
                   }
                   marginLeft="15px"
-                  paddingRight={i + 1 === navLinks.length ? 0 : '15px'}
+                  paddingRight={ind + 1 === navLinks.length ? 0 : '15px'}
                 >
-                  {e.icon}
-                  <text>{e.link}</text>
+                  {nav.icon}
+                  <text>{nav.link}</text>
                 </Box>
               </Link>
             ))}
@@ -97,7 +110,7 @@ export const Header: React.FC = () => {
             style={{ cursor: 'pointer' }}
           />
           <Box display="flex" gap="16px">
-            {mainNavLinks.map((label) => (
+            {mainNavLinks.map((label: string) => (
               <Link
                 key={label}
                 component="button"

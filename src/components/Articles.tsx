@@ -1,6 +1,6 @@
 import { ArrowRightAlt } from '@mui/icons-material'
 import { Box, Button, Card } from '@mui/material'
-import { articlesData } from '../mockData/data'
+import { articlesData, IArticle } from '../mockData/data'
 import theme from '../theme/Theme'
 import { ArticleTile } from './common/ArticleTile'
 import { TitleHeader } from './common/TitleHeader'
@@ -33,16 +33,16 @@ export const Articles: React.FC = () => {
             justifyContent: 'center',
           }}
         >
-          {articlesData.map((item, index) => (
+          {articlesData.map((article: IArticle, index) => (
             <Box
-              key={item.id}
+              key={article.id}
               display={[
                 index > 0 ? 'none' : 'block',
                 index > 1 ? 'none' : 'block',
                 'block',
               ]}
             >
-              <ArticleTile {...item} />
+              <ArticleTile {...article} />
             </Box>
           ))}
         </Card>

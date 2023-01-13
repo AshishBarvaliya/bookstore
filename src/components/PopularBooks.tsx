@@ -1,5 +1,5 @@
 import { Box, Card } from '@mui/material'
-import { books, popularBooks } from '../mockData/data'
+import { books, IBook, IPopularBook, popularBooks } from '../mockData/data'
 import theme from '../theme/Theme'
 import { BookTile } from './common/BookTile'
 import { Tabs } from './common/Tabs'
@@ -22,8 +22,8 @@ export const PopularBooks: React.FC = () => {
       >
         <TitleHeader title={'Popular Books'} subTitle={'Some quality items'} />
         <Tabs
-          tabsItems={popularBooks.map((e) => ({
-            ...e,
+          tabsItems={popularBooks.map((book: IPopularBook) => ({
+            ...book,
             component: (
               <Card
                 sx={{
@@ -46,12 +46,12 @@ export const PopularBooks: React.FC = () => {
                     justifyContent: 'center',
                   }}
                 >
-                  {books.slice(0, 4).map((book, i) => (
+                  {books.slice(0, 4).map((book: IBook, ind: number) => (
                     <Box
                       key={book.id}
                       display={[
-                        i > 0 ? 'none' : 'block',
-                        i > 1 ? 'none' : 'block',
+                        ind > 0 ? 'none' : 'block',
+                        ind > 1 ? 'none' : 'block',
                         'block',
                       ]}
                     >
@@ -68,12 +68,12 @@ export const PopularBooks: React.FC = () => {
                     mt: '30px',
                   }}
                 >
-                  {books.slice(4, 8).map((book, i) => (
+                  {books.slice(4, 8).map((book: IBook, ind: number) => (
                     <Box
                       key={book.id}
                       display={[
-                        i > 0 ? 'none' : 'block',
-                        i > 1 ? 'none' : 'block',
+                        ind > 0 ? 'none' : 'block',
+                        ind > 1 ? 'none' : 'block',
                         'block',
                       ]}
                     >

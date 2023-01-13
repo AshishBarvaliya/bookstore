@@ -1,6 +1,6 @@
 import { Box, Card } from '@mui/material'
 import Carousel from 'react-material-ui-carousel'
-import { IBookSliderData } from '../../mockData/data'
+import { IBook, IBookSliderData } from '../../mockData/data'
 import theme from '../../theme/Theme'
 import { Container } from '../Container'
 import { BookTile } from './BookTile'
@@ -60,7 +60,7 @@ export const BooksSlider: React.FC<IBooksSlider> = ({
             style: { marginTop: '30px', textAlign: 'center' },
           }}
         >
-          {bookSliderData.map((item, index) => (
+          {bookSliderData.map((item: IBookSliderData, index: number) => (
             <Card
               key={index}
               sx={{
@@ -75,12 +75,12 @@ export const BooksSlider: React.FC<IBooksSlider> = ({
                 justifyContent: 'center',
               }}
             >
-              {item.books.map((book, i) => (
+              {item.books.map((book: IBook, ind: number) => (
                 <Box
                   key={book.id}
                   display={[
-                    i > 0 ? 'none' : 'block',
-                    i > 1 ? 'none' : 'block',
+                    ind > 0 ? 'none' : 'block',
+                    ind > 1 ? 'none' : 'block',
                     'block',
                   ]}
                 >

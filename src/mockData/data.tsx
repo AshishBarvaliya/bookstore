@@ -115,7 +115,12 @@ export const features: IBookSliderData[] = [
   },
 ]
 
-export const popularBooks = [
+export interface IPopularBook {
+  id: string
+  title: string
+}
+
+export const popularBooks: IPopularBook[] = [
   {
     id: '1',
     title: 'All Genre',
@@ -201,7 +206,12 @@ export const books: IBook[] = [
   },
 ]
 
-export const quote = {
+export interface IQuote {
+  comment: string
+  author: string
+}
+
+export const quote: IQuote = {
   comment: `“The more that you read, the more things you will know. The more that
   you learn, the more places you’ll go.”`,
   author: 'Dr. Seuss',
@@ -341,7 +351,7 @@ export interface IArticle {
   date: string
 }
 
-export const articlesData = [
+export const articlesData: IArticle[] = [
   {
     id: '1',
     image: 'articles3.png',
@@ -365,7 +375,13 @@ export const articlesData = [
   },
 ]
 
-export const footerNavLinks = [
+export interface IFooterLink {
+  id: string
+  title: string
+  links: string[]
+}
+
+export const footerNavLinks: IFooterLink[] = [
   {
     id: '1',
     title: 'About Us',
@@ -392,3 +408,47 @@ export const footerNavLinks = [
     ],
   },
 ]
+
+export interface IItem {
+  id: string
+  title: string
+  desc: string
+  image: string
+}
+
+export const items: IItem[] = [
+  {
+    id: '1',
+    title: 'Life of seacrits',
+    desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+    image: 'book14.png',
+  },
+  {
+    id: '2',
+    title: 'Portrait photography',
+    desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+    image: 'book8.png',
+  },
+  {
+    id: '3',
+    title: 'Peaceful Enlightment',
+    desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+    image: 'book15.png',
+  },
+]
+
+export interface IBestBook {
+  title: string
+  author: string
+  price: string
+  image: string
+  desc: string
+}
+
+export const bestBook: IBestBook = {
+  image: 'book2.png',
+  author: 'By Timbur Hood',
+  title: 'Birds gonna be happy',
+  desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero ipsum enim pharetra hac.',
+  price: '$ 45.00',
+}

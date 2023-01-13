@@ -1,6 +1,6 @@
 import { Facebook, Instagram, LinkedIn, Twitter } from '@mui/icons-material'
 import { Box, Typography } from '@mui/material'
-import { footerNavLinks } from '../mockData/data'
+import { footerNavLinks, IFooterLink } from '../mockData/data'
 import theme from '../theme/Theme'
 import { Container } from './Container'
 import { Credits } from './Credits'
@@ -44,7 +44,7 @@ export const Footer: React.FC = () => (
             justifyContent: ['center', 'space-evenly', 'start'],
           }}
         >
-          {footerNavLinks.map((nav, ind) => (
+          {footerNavLinks.map((nav: IFooterLink, ind: number) => (
             <Box
               key={ind}
               sx={{
@@ -84,7 +84,7 @@ export const Footer: React.FC = () => (
               ))}
             </Box>
           ))}
-          {footerNavLinks.map((_, ind) =>
+          {footerNavLinks.map((_, ind: number) =>
             ind % 2 === 0 ? (
               <Box
                 key={ind}

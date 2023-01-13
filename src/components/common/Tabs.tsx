@@ -27,25 +27,25 @@ export const Tabs: React.FC<ITabs> = ({ tabsItems }) => {
           px: ['16px', '8px', '4px'],
         }}
       >
-        {tabsItems.map((e) => (
+        {tabsItems.map((item: ITabsIteam) => (
           <Typography
             component="span"
-            key={e.id}
-            color={selected === e.id ? 'text.primary' : '#7A7A7A'}
+            key={item.id}
+            color={selected === item.id ? 'text.primary' : '#7A7A7A'}
             fontFamily="Plus Jakarta Sans"
             fontSize="16px"
             fontWeight={500}
             whiteSpace="nowrap"
-            onClick={() => setSelected(e.id)}
-            borderBottom={selected === e.id ? '1px solid #222222' : 'none'}
+            onClick={() => setSelected(item.id)}
+            borderBottom={selected === item.id ? '1px solid #222222' : 'none'}
           >
-            {e.title}
+            {item.title}
           </Typography>
         ))}
       </Box>
-      {tabsItems.map((e) => (
-        <Box key={e.id} display={selected === e.id ? 'block' : 'none'}>
-          {e.component}
+      {tabsItems.map((item: ITabsIteam) => (
+        <Box key={item.id} display={selected === item.id ? 'block' : 'none'}>
+          {item.component}
         </Box>
       ))}
     </>

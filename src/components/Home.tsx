@@ -2,6 +2,7 @@ import Carousel from 'react-material-ui-carousel'
 import { Card, Typography, Box } from '@mui/material'
 import { Container } from './Container'
 import theme from '../theme/Theme'
+import { IItem, items } from '../mockData/data'
 
 export const Home: React.FC = () => {
   return (
@@ -28,7 +29,7 @@ export const Home: React.FC = () => {
             style: { margin: '0', textAlign: 'start', paddingLeft: '160px' },
           }}
         >
-          {items.map((item, index) => (
+          {items.map((item: IItem, index: number) => (
             <Banner item={item} key={index} />
           ))}
         </Carousel>
@@ -37,18 +38,11 @@ export const Home: React.FC = () => {
   )
 }
 
-interface Item {
-  id: string
-  title: string
-  desc: string
-  image: string
+interface IBannerProps {
+  item: IItem
 }
 
-interface BannerProps {
-  item: Item
-}
-
-const Banner = ({ item }: BannerProps): JSX.Element => {
+const Banner = ({ item }: IBannerProps): JSX.Element => {
   return (
     <Card
       sx={{
@@ -124,24 +118,3 @@ const Banner = ({ item }: BannerProps): JSX.Element => {
     </Card>
   )
 }
-
-const items: Item[] = [
-  {
-    id: '1',
-    title: 'Life of seacrits',
-    desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-    image: 'book14.png',
-  },
-  {
-    id: '2',
-    title: 'Portrait photography',
-    desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-    image: 'book8.png',
-  },
-  {
-    id: '3',
-    title: 'Peaceful Enlightment',
-    desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-    image: 'book15.png',
-  },
-]

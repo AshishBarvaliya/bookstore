@@ -3,16 +3,9 @@ import { Container } from './Container'
 import theme from '../theme/Theme'
 import { ArrowRightAlt } from '@mui/icons-material'
 import { TildeIcon } from '../icons/TildeIcon'
+import { bestBook } from '../mockData/data'
 
 export const BestSelling: React.FC = () => {
-  const bestBook = {
-    img: 'book2.png',
-    author: 'By Timbur Hood',
-    title: 'Birds gonna be happy',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero ipsum enim pharetra hac.',
-    price: '$ 45.00',
-  }
-
   return (
     <Box bgcolor={theme.palette.background.paper}>
       <Container>
@@ -32,7 +25,7 @@ export const BestSelling: React.FC = () => {
             }}
           >
             <img
-              src={bestBook.img}
+              src={bestBook.image}
               width={380}
               alt="best selling"
               style={{ paddingRight: '20px' }}
